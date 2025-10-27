@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" width="800" height="160">
+  <defs>
+    <style>
+      .frame{fill:#90EE90;stroke:rgba(0,0,0,0.15);stroke-width:2;vector-effect:non-scaling-stroke}
+      .name{fill:#333;font:700 28px Arial, sans-serif}
+    </style>
+  </defs>
+  <rect x="10" y="10" width="780" height="140" rx="15" class="frame"/>
+  <text x="400" y="95" text-anchor="middle" class="name">マイケル・ホワイト</text>
+</svg>
+
