@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    overflow-x: hidden;
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -32,8 +31,11 @@ body {
 /* ピン留めセクション */
 .pinned-section {
     position: relative;
-    height: 300vh; /* スクロール余白を作る */
+    overflow: visible; /* ← 必須 */
+    height: calc(var(--vh, 1vh) * 300); /* スクロール余白を作る */
     z-index: 10;
+    scroll-snap-align: none;
+    padding: 0 2rem;
 }
 
 /* メンバー1セクション */
@@ -44,8 +46,9 @@ body {
 .member-container {
     position: sticky;
     top: 0;
-    height: 100vh;
+    overflow-x: hidden;
     display: flex;
+    flex-direction: column; /* 縦並び */
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -80,32 +83,32 @@ body {
 .member-section {
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start !important;
     justify-content: center;
-    padding: 2rem;
     position: relative;
 }
 
 .member-content {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    gap: 3rem;
+    flex-direction: column;
+    justify-content: center; /* space-between は離れる原因 */
+    align-items: flex-start !important;
+    height: auto; /* ←ここ超重要 */
+    min-height: calc(var(--vh, 1vh) * 100);
 }
 
 /* メンバー画像コンテナ */
 .member-image-container {
-    flex: 1;
+    height: auto !important;
+    max-height: 100vh; /* 画面外に出ないように保険 */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .member-image {
-    max-width: 600px;
-    width: 100%;
+    max-width: 90%;
+    width: auto;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -116,42 +119,42 @@ body {
 
 /* メンバー1セクションの画像スタイル */
 #member1-section .member-image {
-    width: 100vw;
+    width: 100%;
     max-width: 900px;
     height: auto;
-    transform: translateX(100vw); /* 画面右端から開始 */
+    transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member2-section .member-image {
-    width: 100vw;
+    width: 100%;
     max-width: 900px;
     height: auto;
-    transform: translateX(100vw); /* 画面右端から開始 */
+    transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member3-section .member-image {
-    width: 100vw;
+    width: 100%;
     max-width: 900px;
     height: auto;
-    transform: translateX(100vw); /* 画面右端から開始 */
+    transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member4-section .member-image {
-    width: 100vw;
+    width: 100%;
     max-width: 900px;
     height: auto;
-    transform: translateX(100vw); /* 画面右端から開始 */
+    transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member5-section .member-image {
-    width: 100vw;
+    width: 100%;
     max-width: 900px;
     height: auto;
-    transform: translateX(100vw); /* 画面右端から開始 */
+    transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
@@ -174,7 +177,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 800px;
-    transform: translateX(-100vw); /* 画面左端から開始 */
+    transform: translateX(-100%); /* 画面左端から開始 */
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     text-align: center;
@@ -190,7 +193,7 @@ body {
     max-width: 800px;
     height: auto;
     display: block;
-    transform: translateX(-100vw); /* 画面左端から開始 */
+    transform: translateX(-100%); /* 画面左端から開始 */
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -348,9 +351,6 @@ h3 {
 }
 
 @media (max-width: 480px) {
-    .member-section {
-        padding: 1rem;
-    }
     
     .member-image {
         max-width: 250px;
