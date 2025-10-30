@@ -86,7 +86,7 @@ setVh(); // 初回実行
           const progress = scrollProgress * 2;
           const translateX = 100 - progress * 100;
           const opacity = Math.min(progress * 2, 1);
-          image.style.transform = `translateX(${translateX}%)`;
+          // image.style.transform = `translateX(${translateX}%)`;
           image.style.opacity = opacity;
         } else {
           image.style.transform = `translateX(0vw)`;

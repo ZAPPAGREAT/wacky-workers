@@ -2,19 +2,9 @@
 
 /* タブレット用 (768px - 1024px) */
 @media (max-width: 1024px) {
-    body {
-      max-width: 100%;
-      scroll-snap-type: y mandatory;
-      margin: 0 auto;
-    }
 
     .section {
         min-height: auto;
-        padding: 1rem 0;
-    }
-
-    .member-container {
-        padding: 3rem 0; /* ← 適度に余白を追加 */
     }
     
     .member-image {
@@ -164,25 +154,53 @@
     
     .member-content {
         flex-direction: row;
-        gap: 1.5rem;
+        gap: 1rem;
+    }
+
+    .title-logo {
+        max-width: 20%;
     }
     
     .member-image {
-        max-width: 200px;
-        height: 200px;
+        max-width: 130px;
+        height: 130px;
         object-fit: cover;
+    }
+
+    #member1-section .member-image {
+        height: 300px;
+    }
+    
+    #member2-section .member-image {
+        height: 300px;
+    }
+    
+    #member3-section .member-image {
+        height: 300px;
+    }
+    
+    #member4-section .member-image {
+        height: 300px;
+    }
+    
+    #member5-section .member-image {
+        height: 300px;
+    }
+
+    .info-image {
+        height: 100px;
     }
     
     .info-frame {
-        padding: 1rem;
+        padding: 0.8rem;
     }
     
     .member-name {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .member-description {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 

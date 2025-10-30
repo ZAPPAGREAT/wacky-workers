@@ -44,6 +44,7 @@ body {
 }
 
 .member-container {
+    position: relative;
     position: sticky;
     top: 0;
     overflow-x: hidden;
@@ -160,7 +161,6 @@ body {
 
 /* メンバー1セクションの枠とテキスト */
 .info-frame-container, .info-image-container {
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
