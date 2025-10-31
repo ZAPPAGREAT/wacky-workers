@@ -42,6 +42,7 @@ setVh(); // 初回実行
   const baseHeight = document.documentElement.clientHeight;
   
   // メインのスクロール処理
+  let titleAnimationCompleted = false;
   function updateScrollEffect() {
     // タイトルセクション
     const titleSection = document.querySelector("#title-section");
@@ -53,6 +54,15 @@ setVh(); // 初回実行
         Math.max((-rect.top + baseHeight * 0.1) / (baseHeight * 1.1), 0),
         1
       );
+
+      if (!titleAnimationCompleted) {
+        if (scrollProgress < 1) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+            titleAnimationCompleted = true;
+        }
+      }
   
       const scale = 0.5 + scrollProgress * 3.5;
       const rotation = scrollProgress * 720;
