@@ -192,15 +192,15 @@
     }
 
     #member1-section .member-image {
-        height: 300px;
+        height: 80%;
     }
     
     #member2-section .member-image {
-        height: 300px;
+        height: 80%;
     }
     
     #member3-section .member-image {
-        height: 300px;
+        height: 80%;
     }
     
     #member4-section .member-image {
@@ -208,12 +208,12 @@
     }
     
     #member5-section .member-image {
-        height: 300px;
+        height: 80%;
     }
 
     .info-image {
         height: 100px;
-        max-width: 400px;
+        max-width: 350px;
     }
     
     .info-frame {
