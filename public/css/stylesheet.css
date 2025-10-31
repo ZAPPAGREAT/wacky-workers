@@ -120,35 +120,35 @@ body {
 
 /* メンバー1セクションの画像スタイル */
 #member1-section .member-image {
-    max-width: 90%;
+    max-width: 1060px;
     height: auto;
     transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member2-section .member-image {
-    max-width: 90%;
+    max-width: 1060px;
     height: auto;
     transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member3-section .member-image {
-    max-width: 90%;
+    max-width: 1060px;
     height: auto;
     transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member4-section .member-image {
-    max-width: 90%;
+    max-width: 1060px;
     height: auto;
     transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member5-section .member-image {
-    max-width: 90%;
+    max-width: 1060px;
     height: auto;
     transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;

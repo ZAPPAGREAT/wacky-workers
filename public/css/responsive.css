@@ -84,7 +84,27 @@
     body {
         max-width: 100%;
         scroll-snap-type: y mandatory;
-      }
+    }
+
+    #member1-section .member-image {
+        max-width: 90%;
+    }
+    
+    #member2-section .member-image {
+        max-width: 90%;
+    }
+    
+    #member3-section .member-image {
+        max-width: 90%;
+    }
+    
+    #member4-section .member-image {
+        max-width: 90%;
+    }
+    
+    #member5-section .member-image {
+        max-width: 90%;
+    }
 
     .member--image-container {
         max-height: 300px;
