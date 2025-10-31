@@ -3,6 +3,10 @@
 /* タブレット用 (768px - 1024px) */
 @media (max-width: 1024px) {
 
+    .title-logo {
+        max-width: 21%;
+    }
+
     .section {
         min-height: auto;
     }
@@ -105,7 +109,7 @@
     }
     
     .title-logo {
-        max-width: 30%;
+        max-width: 25%;
     }
     
     .scroll-indicator {

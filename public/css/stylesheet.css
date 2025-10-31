@@ -35,7 +35,6 @@ body {
     height: calc(var(--vh, 1vh) * 300); /* スクロール余白を作る */
     z-index: 10;
     scroll-snap-align: none;
-    padding: 0 2rem;
 }
 
 /* メンバー1セクション */
@@ -105,6 +104,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .member-image {
@@ -120,40 +120,35 @@ body {
 
 /* メンバー1セクションの画像スタイル */
 #member1-section .member-image {
-    width: 100%;
-    max-width: 900px;
+    max-width: 90%;
     height: auto;
     transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member2-section .member-image {
-    width: 100%;
-    max-width: 900px;
+    max-width: 90%;
     height: auto;
     transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member3-section .member-image {
-    width: 100%;
-    max-width: 900px;
+    max-width: 90%;
     height: auto;
     transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member4-section .member-image {
-    width: 100%;
-    max-width: 900px;
+    max-width: 90%;
     height: auto;
     transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
 }
 
 #member5-section .member-image {
-    width: 100%;
-    max-width: 900px;
+    max-width: 90%;
     height: auto;
     transform: translateX(100%); /* 画面右端から開始 */
     opacity: 0;
