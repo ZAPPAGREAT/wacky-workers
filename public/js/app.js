@@ -54,7 +54,7 @@ setVh(); // 初回実行
         1
       );
   
-      const scale = 0.5 + scrollProgress * 4;
+      const scale = 0.5 + scrollProgress * 3.5;
       const rotation = scrollProgress * 720;
       const opacity = Math.min(scrollProgress * 2, 1);
   
